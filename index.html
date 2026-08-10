@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Healed Souls Psychiatry & Healthcare Services">
 <meta property="og:title" content="Healed Souls — Content Kit">
-<meta property="og:description" content="Compassionate psychiatric & home health care in Houston, TX & California. 10 shareable flyers + 6 articles. 📞 832-608-2212">
+<meta property="og:description" content="Compassionate psychiatric & home health care in Houston, TX & California. 16 shareable flyers + 12 articles + our new e-book. 📞 832-608-2212">
 <meta property="og:url" content="https://nubridgemd1.github.io/healed-souls-kit/">
 <meta property="og:image" content="https://nubridgemd1.github.io/healed-souls-kit/assets/og-banner.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -114,7 +114,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Marketing Flyers</div>
-      <h2>10 ready-to-share flyers</h2>
+      <h2>16 ready-to-share flyers</h2>
       <p>Tap a flyer to view full size. Use <b>Share</b> to send straight to WhatsApp, Instagram, and more, or <b>Download</b> to save.</p>
     </div>
     <div class="grid" id="flyerGrid"></div>
@@ -126,10 +126,24 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Blog Articles</div>
-      <h2>6 articles to read &amp; share</h2>
+      <h2>12 articles to read &amp; share</h2>
       <p>Compassionate, helpful reads for patients and families.</p>
     </div>
     <div class="bloglist" id="blogList"></div>
+  </div>
+</section>
+
+<!-- E-BOOK -->
+<section id="ebook" style="background:linear-gradient(135deg,#eef6f3,#f6efdd);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">New &middot; Pay-As-You-Read E-Book</div>
+      <h2>The Healed Souls Guide to Whole-Person Wellness</h2>
+      <p>A warm, practical companion for mental health &amp; caregiving &mdash; read the opening chapters free, then unlock the rest for a few cents a chapter.</p>
+    </div>
+    <div style="text-align:center">
+      <a class="btn btn-gold" href="ebook.html">📖 Read the Free Preview</a>
+    </div>
   </div>
 </section>
 
@@ -149,7 +163,9 @@
   var FLYERS = [
     ['01','Welcome / Services'],['02','Psychiatric Evaluation'],['03','Medication Management'],
     ['04','Mental Health Care'],['05','Personal Care'],['06','Companionship'],
-    ['07','Whole-Person Care'],['08','New Patients'],['09','For Families'],['10','Contact Us']
+    ['07','Whole-Person Care'],['08','New Patients'],['09','For Families'],['10','Contact Us'],
+    ['11','Anxiety & Depression'],['12','Senior Home Health'],['13','Caregiver Support'],
+    ['14','Faith-Centered Care'],['15','New Patients Welcome'],['16','Free Consultation']
   ];
   var POSTS = [
     ['5 Signs It May Be Time to Talk to a Psychiatric Provider','blog-01-5-signs-time-to-see-psychiatric-provider.html'],
@@ -157,7 +173,13 @@
     ['Caring for a Loved One at Home: How Personal Care Assistance Helps','blog-03-personal-care-assistance-at-home.html'],
     ['The Healing Power of Companionship','blog-04-healing-power-of-companionship.html'],
     ["A Family's Guide to Supporting a Loved One's Mental Health",'blog-05-family-guide-supporting-mental-health.html'],
-    ['Whole-Person Care: Why Mental and Physical Health Belong Together','blog-06-whole-person-care-mind-and-body.html']
+    ['Whole-Person Care: Why Mental and Physical Health Belong Together','blog-06-whole-person-care-mind-and-body.html'],
+    ['Understanding Anxiety: When Everyday Worry Becomes Something More','blog-07-understanding-anxiety-when-worry-becomes-more.html'],
+    ['Depression in Older Adults: The Signs Families Often Miss','blog-08-depression-in-older-adults-signs-families-miss.html'],
+    ['Caring for the Caregiver: Support a Loved One Without Losing Yourself','blog-09-caring-for-the-caregiver-avoid-burnout.html'],
+    ['Aging in Place with Confidence: How Home Health Keeps Seniors Safe','blog-10-aging-in-place-home-health-keeps-seniors-safe.html'],
+    ['Faith, Hope, and Healing: Caring for the Soul Alongside the Mind','blog-11-faith-hope-and-healing-soul-and-mind.html'],
+    ['Better Sleep, Better Mind: The Link Between Rest and Mental Health','blog-12-better-sleep-better-mind.html']
   ];
 
   function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(function(){t.classList.remove('on');},2600);}
