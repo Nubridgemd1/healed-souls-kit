@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2b1a40">
+<title>Mental Health Associated with Widowhood — Flip-Book Reader</title>
+<meta name="description" content="A page-flip e-book reader for 'Mental Health Associated with Widowhood' by Chigozie Fran Achubie (co-author Mrs Oge Onochie). Read a free preview, unlock the full book. Presented by Healing Hearts Publishing.">
+<style>
+  :root{
+    --plum:#2b1a40; --plum2:#3a2352; --plum3:#4a2f66; --plum-deep:#1d1130;
+    --gold:#c9a24b; --gold2:#e0c274; --gold-soft:#efe2c4;
+    --page:#f7f1e3; --page2:#f2e9d6; --ink:#2c2536; --muted:#6d6178; --line:#e2d6bf;
+    --rose:#8a5a6d;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    --shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:
+      radial-gradient(1200px 700px at 50% -10%, rgba(201,162,75,.16), transparent 60%),
+      linear-gradient(160deg,var(--plum-deep),var(--plum) 55%,#241539);
+    color:#efe7d5;font-family:var(--sans);-webkit-font-smoothing:antialiased;
+    min-height:100dvh;display:flex;flex-direction:column;overflow:hidden;
+  }
+  .flag{background:rgba(201,162,75,.14);color:var(--gold2);text-align:center;font-size:11.5px;font-weight:700;padding:5px 12px;border-bottom:1px solid rgba(201,162,75,.2);flex:none}
+
+  /* ---- top bar ---- */
+  .bar{display:flex;align-items:center;gap:12px;padding:10px 16px;flex:none}
+  .bar .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .bar .brand .lotus{width:30px;height:30px;flex:none}
+  .bar .brand b{font-family:var(--serif);font-size:15px;color:#f3ead6;font-weight:700;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar .brand small{display:block;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .bar .sp{flex:1}
+  .bar button{font:inherit;cursor:pointer;border-radius:999px;border:1px solid rgba(201,162,75,.35);background:rgba(255,255,255,.05);color:#efe7d5;font-size:13px;font-weight:700;padding:8px 14px;display:inline-flex;align-items:center;gap:7px}
+  .bar button:hover{background:rgba(201,162,75,.16)}
+  .bar button.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1e06;border:none}
+  @media(max-width:620px){.bar .brand small{display:none}.bar button .lbl{display:none}.bar button{padding:9px 12px}}
+
+  /* ---- stage ---- */
+  .stage{flex:1;display:flex;align-items:center;justify-content:center;position:relative;min-height:0;padding:6px 12px}
+  .book{position:relative;perspective:2600px;display:flex;filter:drop-shadow(var(--shadow));touch-action:pan-y}
+  .leaf{position:relative;background:var(--page);width:var(--pw);height:var(--ph);overflow:hidden;
+    background-image:linear-gradient(90deg, rgba(0,0,0,.05), transparent 6%, transparent 94%, rgba(0,0,0,.05));}
+  .leaf.left{border-radius:5px 0 0 5px;box-shadow:inset -22px 0 40px -28px rgba(43,26,64,.55)}
+  .leaf.right{border-radius:0 5px 5px 0;box-shadow:inset 22px 0 40px -28px rgba(43,26,64,.55)}
+  .leaf.single{border-radius:5px}
+  .spine{width:2px;height:var(--ph);background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.12));align-self:center}
+  @media(max-width:760px){.leaf.right{display:none}.spine{display:none}.leaf.left,.leaf.single{border-radius:6px}}
+
+  .content{position:absolute;inset:0;padding:var(--pad);display:flex;flex-direction:column}
+  .runhead{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;height:16px;display:flex;align-items:center;justify-content:space-between;flex:none}
+  .runhead .r{color:var(--gold)}
+  .flow{flex:1;overflow:hidden;color:var(--ink);font-family:var(--serif);font-size:var(--fs);line-height:1.62;text-align:justify;hyphens:auto}
+  .pageno{height:18px;flex:none;text-align:center;font-family:var(--serif);font-size:12px;color:var(--muted)}
+  .flow p{margin:0 0 .55em}
+  .flow p.lead::first-letter{initial-letter:2.4;font-weight:700;color:var(--plum2);margin-right:.06em;font-family:var(--serif)}
+  .flow p+p{text-indent:1.1em}
+  .flow p.lead+p{text-indent:0}
+  .flow .verse{text-align:center;text-indent:0!important;color:var(--plum2);margin:.15em 0}
+  .flow blockquote{margin:.4em 0;padding:.2em 0 .2em 14px;border-left:3px solid var(--gold);color:var(--plum2);font-style:italic;text-align:left}
+  .flow .li{text-indent:0!important;display:flex;gap:9px}
+  .flow .li b{color:var(--gold);flex:none}
+  .ch{page-break-after:avoid}
+  .ch-orn{display:flex;justify-content:center;margin:2px 0 8px}
+  .ch-n{text-align:center;font-family:var(--serif);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .ch-t{text-align:center;font-family:var(--serif);font-size:calc(var(--fs) * 1.6);font-weight:700;color:var(--plum2);line-height:1.15;margin:4px 0 2px;text-wrap:balance}
+  .ch-rule{width:64px;height:1px;background:var(--gold);margin:12px auto 14px;position:relative}
+  .ch-rule::before{content:"";position:absolute;left:50%;top:-3px;width:6px;height:6px;border-radius:50%;background:var(--gold);transform:translateX(-50%) rotate(45deg)}
+  .sec-t{text-align:center;font-family:var(--serif);font-size:calc(var(--fs) * 1.5);font-weight:700;color:var(--plum2);margin:6px 0 2px}
+  .flow h3.sub{font-family:var(--serif);color:var(--plum2);font-size:calc(var(--fs) * 1.15);margin:.6em 0 .2em;text-align:left}
+
+  /* ---- cover ---- */
+  .cover{position:absolute;inset:0;background:
+      radial-gradient(120% 80% at 50% 0%, rgba(201,162,75,.14), transparent 55%),
+      linear-gradient(170deg,#3a2352,#2b1a40 60%,#20122f);
+    color:#f3ead6;display:flex;flex-direction:column;align-items:center;text-align:center;padding:var(--pad);}
+  .cover .frame{position:absolute;inset:12px;border:1px solid rgba(201,162,75,.4);border-radius:3px;pointer-events:none}
+  .cover .frame::after{content:"";position:absolute;inset:5px;border:1px solid rgba(201,162,75,.18)}
+  .cover .kicker{margin-top:6%;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold2);font-weight:800}
+  .cover h1{font-family:var(--serif);font-weight:800;color:#fff;line-height:1.06;margin:.5em 0 0;font-size:calc(var(--fs) * 2.5);text-wrap:balance}
+  .cover h1 .em{color:var(--gold2);display:block;font-size:1.18em;margin-top:.1em}
+  .cover .sub{font-family:var(--serif);font-style:italic;color:#d9c9ec;font-size:calc(var(--fs) * .98);margin-top:.9em;max-width:26ch}
+  .cover .tag{font-family:var(--serif);font-style:italic;color:var(--gold2);font-size:calc(var(--fs) * .92);margin-top:1em;line-height:1.5}
+  .cover .sp{flex:1}
+  .cover .auth{font-size:calc(var(--fs) * .95);letter-spacing:.12em;text-transform:uppercase;color:#fff;font-weight:800}
+  .cover .co{font-size:calc(var(--fs) * .74);letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-top:.5em;font-weight:700}
+  .cover .pub{margin-top:1.1em;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(239,226,196,.7);font-weight:700}
+  .cover .lotus{margin:1.1em 0 .3em}
+
+  /* ---- paywall page ---- */
+  .paywall{position:absolute;inset:0;background:linear-gradient(170deg,#fdf9ef,#f4ead4);display:flex;flex-direction:column;align-items:center;text-align:center;padding:calc(var(--pad) * 1.1);justify-content:center;color:var(--ink)}
+  .paywall .lock{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--plum2),var(--plum));display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:24px;box-shadow:0 10px 24px rgba(43,26,64,.3)}
+  .paywall h2{font-family:var(--serif);color:var(--plum2);font-size:calc(var(--fs) * 1.7);margin:.5em 0 .1em;font-weight:800}
+  .paywall p{font-family:var(--serif);color:var(--muted);font-size:calc(var(--fs) * .98);max-width:34ch;margin:.3em 0}
+  .paywall .price{font-family:var(--serif);font-weight:800;color:var(--plum);font-size:calc(var(--fs) * 1.9);margin:.4em 0 .1em}
+  .paywall .price small{font-size:.5em;color:var(--muted);font-weight:600}
+  .paywall .btn{font:inherit;cursor:pointer;border:none;border-radius:999px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1e06;font-weight:800;padding:12px 22px;font-size:calc(var(--fs) * .95);margin-top:.7em;box-shadow:0 10px 24px rgba(201,162,75,.35)}
+  .paywall .code{margin-top:.7em;background:none;border:none;color:var(--plum2);font-weight:700;font-size:calc(var(--fs) * .82);cursor:pointer;text-decoration:underline}
+  .paywall ul{list-style:none;padding:0;margin:.8em 0 0;font-family:var(--serif);font-size:calc(var(--fs) * .82);color:var(--muted)}
+  .paywall ul li{margin:.2em 0}
+  .paywall ul li::before{content:"✦ ";color:var(--gold)}
+
+  /* ---- flip animation ---- */
+  @keyframes turnR{from{transform:rotateY(-108deg);box-shadow:-40px 0 60px -20px rgba(0,0,0,.5)}to{transform:rotateY(0);box-shadow:none}}
+  @keyframes turnL{from{transform:rotateY(108deg);box-shadow:40px 0 60px -20px rgba(0,0,0,.5)}to{transform:rotateY(0);box-shadow:none}}
+  .leaf.right.anim{transform-origin:left center;animation:turnR .52s ease}
+  .leaf.left.anim{transform-origin:right center;animation:turnL .52s ease}
+  .leaf.single.anim-n{transform-origin:left center;animation:turnR .5s ease}
+  .leaf.single.anim-p{transform-origin:right center;animation:turnL .5s ease}
+  .curl{position:absolute;top:0;bottom:0;width:34px;pointer-events:none;opacity:0;transition:opacity .2s}
+  .leaf.right .curl{right:0;background:linear-gradient(90deg,transparent,rgba(43,26,64,.16))}
+  .leaf.left .curl{left:0;background:linear-gradient(270deg,transparent,rgba(43,26,64,.16))}
+  .book:hover .curl{opacity:1}
+
+  /* ---- nav ---- */
+  .nav{flex:none;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 16px 12px}
+  .nav .arrow{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,162,75,.4);background:rgba(255,255,255,.06);color:var(--gold2);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .nav .arrow:hover:not(:disabled){background:rgba(201,162,75,.18)}
+  .nav .arrow:disabled{opacity:.3;cursor:default}
+  .nav .prog{flex:1;max-width:420px;display:flex;flex-direction:column;gap:5px}
+  .nav .track{height:5px;border-radius:5px;background:rgba(255,255,255,.12);overflow:hidden}
+  .nav .fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:5px;transition:width .35s ease}
+  .nav .lbl{display:flex;justify-content:space-between;font-size:11px;color:rgba(239,226,196,.75);font-weight:600}
+
+  /* ---- TOC drawer ---- */
+  .drawer-bg{position:fixed;inset:0;background:rgba(15,8,26,.6);backdrop-filter:blur(3px);display:none;z-index:60}
+  .drawer-bg.show{display:block}
+  .drawer{position:fixed;top:0;left:0;bottom:0;width:340px;max-width:88vw;background:linear-gradient(180deg,#241539,#2b1a40);border-right:1px solid rgba(201,162,75,.25);z-index:61;transform:translateX(-100%);transition:.25s;overflow:auto;padding:18px 8px 24px}
+  .drawer.show{transform:none}
+  .drawer .dh{display:flex;align-items:center;justify-content:space-between;padding:6px 12px 12px}
+  .drawer .dh b{font-family:var(--serif);font-size:17px;color:#f3ead6}
+  .drawer .x{border:none;background:rgba(255,255,255,.08);color:#efe7d5;width:30px;height:30px;border-radius:50%;font-size:15px;cursor:pointer}
+  .toc-item{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:none;background:none;color:#e7dcc9;font:inherit;font-size:13px;padding:9px 12px;border-radius:9px;cursor:pointer}
+  .toc-item:hover{background:rgba(201,162,75,.12)}
+  .toc-item .n{font-family:var(--serif);color:var(--gold);font-size:12px;width:26px;flex:none;font-weight:700}
+  .toc-item .t{flex:1;min-width:0}
+  .toc-item .lk{color:var(--gold);opacity:.75;font-size:12px}
+  .toc-sec{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:800;padding:14px 12px 4px}
+
+  /* ---- unlock modal ---- */
+  .modal-bg{position:fixed;inset:0;background:rgba(15,8,26,.72);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:80;padding:18px}
+  .modal-bg.show{display:flex}
+  .modal{background:linear-gradient(170deg,#fdf9ef,#f3e9d3);color:var(--ink);border-radius:18px;max-width:400px;width:100%;padding:26px 24px;box-shadow:0 30px 80px rgba(0,0,0,.5);text-align:center;font-family:var(--serif)}
+  .modal .lotus{margin-bottom:6px}
+  .modal h3{color:var(--plum2);font-size:20px;margin:2px 0 4px;font-weight:800}
+  .modal p{color:var(--muted);font-size:13.5px;margin:.3em 0 1em}
+  .modal .price{font-weight:800;color:var(--plum);font-size:26px;margin-bottom:.3em}
+  .modal .price small{font-size:.5em;color:var(--muted)}
+  .modal .btn{font:inherit;cursor:pointer;border:none;border-radius:12px;padding:13px;width:100%;font-weight:800;font-size:15px}
+  .modal .btn.pay{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1e06;box-shadow:0 10px 24px rgba(201,162,75,.3)}
+  .modal .divider{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;margin:14px 0}
+  .modal .divider::before,.modal .divider::after{content:"";flex:1;height:1px;background:var(--line)}
+  .modal input{width:100%;font:inherit;font-size:15px;padding:11px 13px;border:1.5px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);text-align:center;letter-spacing:.12em}
+  .modal input:focus{outline:none;border-color:var(--gold)}
+  .modal .btn.ghost{background:transparent;border:1.5px solid var(--plum2);color:var(--plum2);margin-top:9px}
+  .modal .close{margin-top:12px;background:none;border:none;color:var(--muted);font-size:12.5px;cursor:pointer;text-decoration:underline;font-family:var(--sans)}
+  .modal .note{font-size:11px;color:var(--muted);margin-top:12px;font-family:var(--sans)}
+
+  .toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%) translateY(30px);background:var(--plum-deep);color:#f3ead6;border:1px solid rgba(201,162,75,.3);padding:11px 18px;border-radius:12px;font-size:13px;font-weight:600;opacity:0;transition:.25s;z-index:90;pointer-events:none}
+  .toast.show{opacity:1;transform:translateX(-50%)}
+  .badge-unlocked{display:none;align-items:center;gap:6px;color:var(--gold2);font-size:11px;font-weight:700}
+  body.unlocked .badge-unlocked{display:inline-flex}
+  #probeFlow{flex:none;overflow:visible;height:auto;display:block}
+</style>
+</head>
+<body>
+<div class="flag">📖 DIGITAL EDITION · Illustrative reader — free preview, then unlock the full book. Presented by Healing Hearts Publishing.</div>
+
+<div class="bar">
+  <div class="brand">
+    <svg class="lotus" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round"><path d="M24 40c-9 0-15-6-15-6s6-4 15-4 15 4 15 4-6 6-15 6Z"/><path d="M24 40V22"/><path d="M24 24c-4-4-4-12 0-18 4 6 4 14 0 18Z" fill="rgba(201,162,75,.18)"/><path d="M24 26c-6-1-11-7-12-14 7 1 12 6 12 14Z" fill="rgba(201,162,75,.12)"/><path d="M24 26c6-1 11-7 12-14-7 1-12 6-12 14Z" fill="rgba(201,162,75,.12)"/></g></svg>
+    <div><b>Mental Health &amp; Widowhood</b><small>Healing Hearts Publishing</small></div>
+  </div>
+  <div class="sp"></div>
+  <span class="badge-unlocked">✓ Full access</span>
+  <button onclick="RD.toc()"><span style="font-size:15px">☰</span><span class="lbl">Contents</span></button>
+  <button class="primary" id="unlockBtn" onclick="RD.askUnlock()">🔓 <span class="lbl">Unlock full book</span></button>
+</div>
+
+<div class="stage">
+  <div class="book" id="book">
+    <div class="leaf left" id="leafL"><div class="curl"></div></div>
+    <div class="spine"></div>
+    <div class="leaf right" id="leafR"><div class="curl"></div></div>
+  </div>
+</div>
+
+<div class="nav">
+  <button class="arrow" id="prev" onclick="RD.prev()" aria-label="Previous page">‹</button>
+  <div class="prog">
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <div class="lbl"><span id="loc">Cover</span><span id="pct">0%</span></div>
+  </div>
+  <button class="arrow" id="next" onclick="RD.next()" aria-label="Next page">›</button>
+</div>
+
+<!-- probe for pagination -->
+<div id="probe" style="position:absolute;visibility:hidden;left:-9999px;top:0" aria-hidden="true"><div class="flow" id="probeFlow"></div></div>
+
+<div class="drawer-bg" id="drawerBg" onclick="RD.toc(false)"></div>
+<div class="drawer" id="drawer">
+  <div class="dh"><b>Contents</b><button class="x" onclick="RD.toc(false)">✕</button></div>
+  <div id="tocList"></div>
+</div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <svg class="lotus" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round"><path d="M24 40c-9 0-15-6-15-6s6-4 15-4 15 4 15 4-6 6-15 6Z"/><path d="M24 40V22"/><path d="M24 24c-4-4-4-12 0-18 4 6 4 14 0 18Z" fill="rgba(201,162,75,.18)"/></g></svg>
+    <h3>Unlock the full book</h3>
+    <p>Continue reading all 53 chapters, the support checklist and closing reflections.</p>
+    <div class="price" id="modalPrice">₦3,500 <small>/ $5</small></div>
+    <button class="btn pay" onclick="RD.checkout()">Pay &amp; read now</button>
+    <div class="divider">or</div>
+    <input id="codeInput" placeholder="ACCESS CODE" autocomplete="off" spellcheck="false">
+    <button class="btn ghost" onclick="RD.redeem()">Unlock with access code</button>
+    <button class="close" onclick="RD.closeModal()">Maybe later</button>
+    <div class="note">Already purchased on the Healed Souls site? Access unlocks automatically.</div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================================
+   CONFIG — edit for the Healed Souls integration
+   ========================================================================= */
+const CFG = {
+  priceHTML: "₦3,500 <small>/ $5</small>",
+  accessCode: "HEALED2026",         // manual-sale unlock code (change per campaign)
+  freeThroughChapter: 3,            // free preview = front matter + chapters 1..3
+  storageKey: "hs_widowhood_unlocked_v1"
+  // Real payment: the parent site should complete checkout, then call
+  // iframe.contentWindow.postMessage({type:'hs-unlock', token:'...'}, '*')
+  // or load the reader with ?unlocked=1
+};
+
+/* =========================================================================
+   BOOK CONTENT  (manuscript © the authors — for Healing Hearts Publishing)
+   ========================================================================= */
+const CH = [];
+function ch(n,t){ CH.push({n,t,ps:Array.prototype.slice.call(arguments,2)}); }
+
+ch(1,"When a Woman Becomes a Widow",
+"A woman can become a widow in a single moment, but becoming a widow is not a single event. The death certificate may have a date. The funeral may have a date. The mourning period may have a date. But the psychological transition can continue for years.",
+"For some women, the loss comes while they are still carrying a child, nursing a baby, raising toddlers, paying school fees, or building a home. The husband who shared decisions, responsibilities, income, plans, and emotional companionship is suddenly gone. The surviving wife is expected to grieve while simultaneously becoming the planner, provider, protector, and parent.",
+"In many African communities, the days immediately after death bring people together. There are visits, prayers, food, phone calls, condolences, and promises. This support can be deeply meaningful. Yet the widow's most difficult season may begin when the crowd disappears.",
+"The question is not only, “How do we bury him?” It is also, “How do we help her live?”",
+"Widowhood should never be treated as a woman's loss of identity. She is still a person with dignity, rights, dreams, needs, and a future.");
+
+ch(2,"Everyone Came When He Died, But Who Stayed?",
+"One of the most painful realities of bereavement is the difference between temporary sympathy and sustained support. People may say, “We are here for you.” They may promise school fees, housing, food, employment, or help with the children. Some fulfill those promises. Others are unable to do so. Some simply move on.",
+"Months later, the widow may still be standing in the same house, facing the same bills, the same school fees, the same children, and a new reality that has not become easier.",
+"This is why the first weeks after a death should not be the only time a widow is assessed for support. The three-month, six-month, one-year, and two-year periods can be critical. Grief can become more noticeable when social attention fades.",
+"Sustainable support means asking again: “How are you doing now?” It means remembering school calendars, anniversaries, birthdays, medical needs, rent, employment, and the children's wellbeing.",
+"The funeral ends. The widow's life does not.");
+
+ch(3,"When the Funeral Ends and Reality Begins",
+"One real-life experience illustrates this transition vividly. Shortly after losing her husband, a young widow discovered that even housing could no longer be taken for granted. Her landlord did not directly tell her to leave. Instead, quit notices were given to everyone in the compound. One by one, people began packing. She realized she might soon be left alone with her children and no secure plan.",
+"She was working, so she borrowed money from her workplace and secured another apartment. It was a practical solution, but it came at a cost. Grief did not pause while she arranged housing. She had to make major decisions while emotionally overwhelmed.",
+"This is the hidden labor of widowhood: grief management and crisis management happening at the same time.",
+"A widow may be crying in the morning and negotiating rent in the afternoon. She may attend a funeral service and then calculate school fees. She may receive condolences and then worry about food.",
+"Support must therefore be practical as well as emotional.");
+
+ch(4,"Four Children, One Mother, and an Uncertain Future",
+"The widow whose story anchors this book was only thirty-three when her husband died. She was approximately eight months pregnant with their fourth child. Her first child was still very young, and the other children were also small. She suddenly became responsible for children who needed food, clothing, education, medical care, supervision, affection, and stability.",
+"This is not simply a financial burden. It is a psychological burden.",
+"Every school bill can become an anxiety trigger. Every illness can produce fear. Every unexpected expense can reopen the question: “How will I manage this alone?”",
+"Yet motherhood can also become a source of meaning. Her children became part of the reason she kept working, praying, planning, and moving forward.",
+"Widowhood may change a family's structure, but it should never erase the mother's right to receive support.");
+
+ch(5,"Hunger Behind Closed Doors",
+"There are forms of poverty that outsiders never see.",
+"There were days when the last available food was given to the children. There were nights when the mother went without because the children needed to eat. There were moments when the question was not about comfort, but survival.",
+"Financial hardship can produce chronic stress. Chronic stress can affect sleep, concentration, mood, relationships, and physical health. A mother who constantly calculates food and school fees is carrying a psychological load that may be invisible to everyone around her.",
+"A compassionate community does not wait for a widow to beg. It asks what practical support can reduce the pressure.",
+"Food assistance, school support, employment opportunities, childcare, and safe housing are not luxuries. They can be mental-health interventions because they reduce the conditions that keep a person in survival mode.");
+
+ch(6,"When Help Comes With a Price",
+"One of the most disturbing experiences described in this book is the way some vulnerable widows are sexually exploited by people who know they need help.",
+"A man may say, “I can help you.” He may offer money, a job, food, housing, or business assistance. Then the offer changes. He wants sexual access. The widow must choose between accepting exploitation and losing the assistance.",
+"This is not genuine help. It is coercion built around vulnerability.",
+"The same pattern can appear in employment. A widow may apply for a job because she needs to feed her children. Someone with authority may offer the position and then begin making sexual advances. If she refuses, she may be threatened with dismissal or denied the opportunity.",
+"A widow's need does not give anyone ownership of her body.",
+"Communities need confidential reporting pathways, safe employment practices, women's support networks, and consequences for exploitation. Most importantly, women need to know that saying “no” is their right.");
+
+ch(7,"When Employment Becomes Another Place of Exploitation",
+"Work can be a pathway out of poverty, but for a vulnerable widow it can also become another site of power imbalance.",
+"The lived experience described in this book includes job-seeking encounters in which employers or people with influence responded to widowhood with sexual interest rather than compassion. This can create a devastating psychological conflict: “If I refuse, how will I feed my children?”",
+"The answer cannot be that the woman must surrender her dignity to survive.",
+"Safe employment requires clear boundaries, transparent hiring practices, mechanisms for reporting harassment, and protection from retaliation. Women should be evaluated for their skills and qualifications, not their marital status or vulnerability.",
+"Economic empowerment must mean genuine independence, not dependence on people who expect something personal in return.");
+
+ch(8,"When Even the Church Does Not Feel Safe",
+"For many women, the church is expected to be a place of refuge. Faith can be a tremendous source of strength during bereavement. But religious leadership does not automatically make every individual safe.",
+"One real-life encounter in this story occurred after a friend invited the widow to a church program. The friend wanted to see the bishop and asked her to come along. In the office, the bishop asked personal questions and then made an unexpected sexual request. The widow was shocked. When her friend returned, she immediately told her she was leaving.",
+"The incident changed the way she viewed certain religious spaces. It also reminded her that vulnerable people must be discerning even in places where they expect protection.",
+"The lesson is not that churches are unsafe. Many churches provide remarkable care. The lesson is that spiritual authority must be accountable. A title does not remove human capacity for misconduct.",
+"Faith communities should establish safeguarding policies, confidential reporting systems, trained leaders, and clear consequences for abuse.");
+
+ch(9,"Family Rejection and the Pain of Being Forgotten",
+"The pain of family rejection can be more devastating than rejection from strangers because family is where many people expect refuge.",
+"There were periods when siblings stopped taking calls. Some blocked communication. The widow was already struggling, yet the people she expected to hear from became unavailable.",
+"Sometimes families do not withdraw because they do not care. They may themselves be financially overwhelmed. But from the widow's perspective, silence can feel like abandonment.",
+"Support should therefore be organized rather than dependent entirely on individual generosity. A widow should not have to call ten relatives before discovering that nobody can help.",
+"A structured family meeting, community support plan, church support, or professional social-work referral can help transform vague promises into practical plans.");
+
+ch(10,"When Friends Become Afraid of You",
+"Widowhood can alter friendships in ways that are difficult to explain.",
+"Some married women may become suspicious of a widow around their husbands. In the lived experience behind this book, former friends became uncomfortable and warned the widow about how she greeted their husbands. One woman even complained that her husband seemed happy whenever he saw the widow.",
+"The widow's response was simple: she had not changed how she greeted him. Her marital status had changed; her character had not.",
+"This kind of stigma can create social isolation. A woman may lose friendships at exactly the time she needs them most.",
+"Communities should challenge the idea that widows are inherently threats to marriages. A widow deserves friendship without being treated as a sexual danger.");
+
+ch(11,"She Killed Her Husband",
+"Few accusations are more psychologically destructive than telling a grieving woman that she caused the death of her husband.",
+"The author's own family history includes this experience. After her father died, her mother was accused by a family member of having a role in his death. The accusation broke her. She cried and tried to defend herself, but the accusation continued.",
+"She was taken to different places to swear that she had no involvement. At one point, the family went through a religious process involving an oath. During one visit, she broke down crying. The priest challenged the relatives: what would a woman gain by killing the father of her children and then being left to raise them alone?",
+"The priest told them to stop.",
+"This story illustrates how cultural accusations can become psychological torture. Grief should not be compounded by interrogation, humiliation, forced rituals, or accusations without evidence.",
+"When a death occurs, medical and lawful processes should be respected. A widow should not be made to prove her innocence through degrading or dangerous practices.");
+
+ch(12,"The Battle Over Property",
+"When a husband dies, property can become a source of conflict. Land, houses, cars, businesses, farms, savings, and personal belongings may suddenly become objects of competition.",
+"A widow may still be grieving while relatives are asking who owns what.",
+"Children can become invisible in these disputes.",
+"The ethical question should be: “How do we protect the family and the children's future?” not “How much can we take?”",
+"Property rights, inheritance laws, documentation, legal advice, and community education can reduce exploitation. Widows should be encouraged, where safe and feasible, to secure copies of important documents and seek qualified legal assistance.",
+"No family should have to choose between mourning and defending its basic rights.");
+
+ch(13,"You Are a Stranger Here",
+"Some widows are treated as though the death of their husbands has erased their belonging.",
+"In the author's family experience, her mother was at times treated as a stranger in the compound after her husband died. She was not even allowed to pluck fruit from the compound because others claimed ownership and emphasized that she was not originally from the family.",
+"Imagine grieving your husband while being told that you no longer belong in the home where you lived.",
+"This kind of treatment can produce humiliation, helplessness, anger, and chronic stress. The widow is already grieving one relationship; now her sense of home and belonging is also threatened.",
+"A widow should never be stripped of dignity because her husband died.");
+
+ch(14,"When Children Become the Forgotten Victims",
+"Children often become the quiet casualties of widowhood.",
+"Some lose access to stable education. Some are sent to relatives because their mother cannot afford to raise them. Some are bullied because they have no father in the home. Some live in households where they are treated as second-class children.",
+"Separation may solve an immediate financial problem while creating a long-term emotional one.",
+"Whenever possible, support should be designed to keep children safely connected to their mother. If a child must live elsewhere, the arrangement should be monitored and the child's safety and emotional wellbeing must remain central.",
+"A widow's children are not an extension of a property dispute. They are human beings grieving their father.");
+
+ch(15,"The Mental Health Burden of Widowhood",
+"Widowhood can involve bereavement, trauma, financial insecurity, parenting stress, social rejection, and fear at the same time. It is therefore understandable that some widows experience significant mental-health symptoms.",
+"Possible concerns include persistent sadness, anxiety, panic symptoms, sleep disturbance, intrusive memories, irritability, loss of interest, hopelessness, difficulty concentrating, social withdrawal, and symptoms associated with traumatic stress.",
+"Not every grieving widow has a mental disorder. Grief is a human response to loss. But when symptoms become severe, persistent, or interfere substantially with daily functioning, professional assessment can help.",
+"Mental-health care should not be reserved for people who are already in crisis. Early support can prevent suffering from becoming more severe.");
+
+ch(16,"The Nights Nobody Sees",
+"There are nights that nobody sees.",
+"A widow may smile during the day, work, cook, care for her children, attend church, answer questions, and appear strong. At night, the house becomes quiet and memories become louder.",
+"In this real-life story, there were many nights of crying. The pain was triggered by memories, by loneliness, and by the children's questions about their father.",
+"When children ask, “Where is Daddy?” or “Is Daddy coming back?” the question can reopen grief.",
+"At thirty-three, the widow was still young. She had lost a husband, a companion, a partner in decision-making, and the person with whom she had imagined the future.",
+"Anyone who says, “She just moved on,” may not understand what happened inside those nights.");
+
+ch(17,"When Trauma Follows You",
+"Trauma can remain long after the immediate danger has passed.",
+"A woman who has been exploited may become more cautious. A woman who has been falsely accused may struggle to trust. A woman who has been rejected by friends may withdraw. A woman who has been threatened over property may remain hypervigilant.",
+"These reactions can be understood as attempts by the mind to protect itself.",
+"Healing does not require pretending that nothing happened. It requires creating enough safety that the mind no longer has to remain permanently on guard.",
+"Therapy can help a survivor process traumatic experiences, identify triggers, develop coping skills, rebuild trust carefully, and establish healthy boundaries.");
+
+ch(18,"You Are Not Your Loss",
+"You may have lost your husband, but you have not lost yourself.",
+"Widowhood is a chapter, not an identity that erases every other part of you.",
+"You are still a woman of value. You are still capable of learning, working, loving, creating, serving, leading, and dreaming.",
+"There may be days when you do not feel strong. Strength does not mean never crying. Strength can mean asking for help, resting, setting a boundary, making a difficult decision, or getting up the next morning.",
+"Your loss changed your life. It does not determine your worth.");
+
+ch(19,"When Depression Makes Tomorrow Look Impossible",
+"Depression can make the future appear closed. It can tell a person that nothing will improve and that everyone would be better without her.",
+"Those thoughts deserve attention, not shame.",
+"A widow who notices persistent hopelessness, loss of interest, severe sleep or appetite changes, inability to function, or thoughts of death should seek professional mental-health assessment.",
+"Faith can be part of healing, but seeking clinical care is not a failure of faith. A person can pray and see a therapist. A person can trust God and take prescribed medication. Spiritual support and evidence-based care can coexist.",
+"If someone is in immediate danger or thinking about suicide or self-harm, urgent emergency help is needed. Do not leave the person alone; involve trusted supports and local emergency/crisis services.");
+
+ch(20,"When Anxiety Takes Over",
+"Anxiety can make the mind run ahead of the present moment. A widow may worry about rent, food, school fees, illness, safety, the children's future, and what people are saying.",
+"When anxiety rises, return to the present.",
+"Take a slow breath. Put both feet on the ground. Name what you can see and hear. Ask: “What is the next problem I can actually address?”",
+"A helpful reminder is:",
+"“I am here. I am safe in this moment. I do not have to solve every problem right now.”",
+"Practical planning can also reduce anxiety. Break large responsibilities into smaller tasks and ask for assistance where appropriate.");
+
+ch(21,"When Trauma Comes Back",
+"A date, song, smell, photograph, place, conversation, or child's question can trigger grief or trauma.",
+"A trigger does not mean you are failing.",
+"It means something reminded your nervous system of a painful experience.",
+"Pause. Breathe. Orient yourself to the present. Remind yourself:",
+"“That happened to me, but it is not happening to me right now.”",
+"If triggers are frequent or disabling, trauma-focused psychotherapy can be helpful. The goal is not to erase memory. The goal is to reduce the power of the memory over the present.");
+
+ch(22,"When People Mistreat You",
+"You do not have to accept mistreatment simply because you need help.",
+"You can say no.",
+"You can establish boundaries.",
+"You can leave unsafe situations.",
+"You can seek help from another person.",
+"You can protect yourself and your children.",
+"Forgiveness can be deeply freeing, but forgiveness does not require continued access to someone who repeatedly harms you. A forgiving heart and healthy boundaries can exist together.",
+"Peace is not the same as passivity. Sometimes choosing peace means refusing to participate in a destructive argument while still taking appropriate steps to protect yourself.");
+
+ch(23,"Faith, Forgiveness, and Finding Strength",
+"Faith was one of the strongest sources of resilience described in the real-life story behind this book. Prayer provided hope when practical circumstances were overwhelming.",
+"Forgiveness also became a coping strategy. Rather than carrying every offense indefinitely, the widow chose to release resentment and keep moving.",
+"Forgiveness, however, should never be used to silence survivors or excuse abuse. A person can forgive while reporting misconduct. She can forgive while moving away. She can forgive while refusing further contact.",
+"The Christian message of hope can be especially meaningful to readers of faith. Scripture reminds us, “God is our refuge and strength, a very present help in trouble” (Psalm 46:1, KJV).",
+"For a widow, faith should become a source of refuge—not a weapon used to control her.");
+
+ch(24,"Choosing Peace Without Choosing Powerlessness",
+"The widow whose story appears throughout this book made a deliberate choice not to fight every person who opposed her. She chose peace. She focused on her children and survival.",
+"At one point, her husband's younger brother intervened. She believes that her refusal to constantly quarrel or fight contributed to the possibility of intervention. She had chosen to remain focused rather than become consumed by every conflict.",
+"Choosing peace does not mean surrendering rights. It means deciding which battles deserve your energy and which ones will only drain you.",
+"Sometimes the most powerful sentence is: “I will not allow this to destroy me.”");
+
+ch(25,"Surviving Within Your Means",
+"Widowhood can make social pressure especially dangerous. A woman may feel she must maintain the lifestyle she had while married even when the household income has changed dramatically.",
+"Living within one's means can protect both finances and mental health.",
+"The real-life advice offered in this book is simple: do not build a life around impressing people you cannot trust. Create a realistic budget. Prioritize food, housing, education, healthcare, safety, and essential needs.",
+"Financial discipline does not mean living without dignity. It means protecting the future from unnecessary pressure.");
+
+ch(26,"Work, Dignity, and Independence",
+"Work became one of the anchors of survival in the real-life story. Employment provided structure, income, and a reason to keep moving.",
+"Her mother also demonstrated this kind of determination after losing her husband. She sold drinks and food, engaged in petty trading, and did whatever honest work she could to put food on the table and pay school fees.",
+"There is dignity in honest work.",
+"Economic empowerment programs for widows should include skills training, small-business support, access to capital, mentorship, digital skills, and safe employment pathways.",
+"The objective should not be to make widows dependent on charity. It should be to help women regain agency and sustainable income.");
+
+ch(27,"Raising Children While Rebuilding Yourself",
+"A widow often has to rebuild herself while raising children who are rebuilding themselves.",
+"The children may ask questions she cannot answer. They may act out. They may struggle academically. They may miss their father at different developmental stages.",
+"The mother must therefore care for herself without guilt.",
+"A depleted parent cannot pour endlessly from an empty cup. Rest, support, medical care, counseling, friendships, spiritual community, and safe childcare can help.",
+"The goal is not perfection. It is stability, safety, and connection.");
+
+ch(28,"When Children Need Healing Too",
+"Children grieve differently from adults. A child may not have the words to describe sadness. Grief may appear as irritability, withdrawal, sleep problems, school difficulties, fear, clinginess, or questions repeated many times.",
+"Children need honest, age-appropriate communication. They need reassurance that the death was not their fault. They need permission to remember their father and express emotions.",
+"If a child is sent to live with relatives, the arrangement should preserve attachment and safety. No child should be treated as a burden because the parent who died can no longer provide.",
+"Support for widows must therefore include support for children.");
+
+ch(29,"Building a Support System That Lasts",
+"A sustainable support system should begin before the funeral ends.",
+"Families and communities can create a simple plan: Who checks on the widow? Who helps with school? Who can assist with emergency food? Who can help with employment? Who can accompany her to legal or medical appointments? Who notices if her mental health is deteriorating?",
+"The goal is not dependency. It is a bridge from crisis to stability.",
+"A widow should not have to repeatedly prove that she is still struggling before people remember her.");
+
+ch(30,"What Families Can Do",
+"Families can reduce suffering dramatically.",
+"Do not rush into property disputes. Do not isolate the widow. Do not accuse without evidence. Do not humiliate her through forced rituals. Do not separate children unnecessarily.",
+"Instead, ask practical questions: Is there food? Is the housing secure? Are the children in school? Does she have identification and important documents? Does she need medical or psychological support? Does she have a safe person to call?",
+"The strongest families are not those without conflict. They are those that choose compassion when conflict becomes possible.");
+
+ch(31,"What Churches Can Do",
+"Churches can become powerful partners in widow support.",
+"A church can create a widow-care ministry with trained volunteers, grief groups, emergency assistance, school-fee funds, food support, job connections, counseling referrals, and child-support programs.",
+"Church leaders should also establish safeguarding policies. Women must be able to report sexual misconduct without fear of spiritual retaliation.",
+"The church can preach dignity, compassion, justice, and protection—not only endurance.",
+"James 1:27 reminds believers of the importance of caring for vulnerable people. The call to care should be practical, consistent, and safe.");
+
+ch(32,"What Government Can Do",
+"Government support can move widowhood from private survival to public social protection.",
+"Possible interventions include social assistance, healthcare access, school support for children, housing assistance, legal aid, protection from domestic and sexual exploitation, skills programs, microenterprise support, and accessible mental-health services.",
+"A functioning system should not depend entirely on whether a widow happens to know a wealthy person.",
+"Widows should be able to access support because they qualify—not because they know someone powerful.");
+
+ch(33,"Legal and Property Protection",
+"Property insecurity is both a legal and mental-health issue. Constant fear of losing a home, land, savings, or belongings creates chronic stress.",
+"Women should be encouraged to keep copies of relevant documents where safe, understand applicable inheritance laws, and seek qualified legal assistance when disputes arise.",
+"Communities should educate families about lawful inheritance and children's rights. Traditional practices should never be used as an excuse for violence, coercion, or unlawful dispossession.",
+"This book does not replace legal advice. Laws vary by country and state, so individual cases require qualified local counsel.");
+
+ch(34,"Economic Empowerment",
+"Economic empowerment should go beyond occasional gifts.",
+"Widows benefit from skills, education, entrepreneurship, access to safe credit, professional networks, job placement, childcare, and mentorship.",
+"A widow who can earn sustainably gains more than money. She gains choice.",
+"Choice can reduce vulnerability to exploitation. It can make it easier to say no to unsafe relationships. It can improve housing stability and educational opportunities for children.",
+"Economic empowerment is therefore also a protection strategy.");
+
+ch(35,"Education as a Lifeline",
+"Education can interrupt the cycle of poverty that widowhood can create.",
+"When a mother's income disappears, school fees may become one of the first crises. Yet keeping children in school can preserve future opportunities.",
+"Support programs should consider tuition, uniforms, books, transportation, meals, and technology—not just tuition alone.",
+"Widows themselves also deserve opportunities for education and skills development. A woman may need to learn a new trade, complete a certification, or acquire digital skills to rebuild her career.");
+
+ch(36,"Mental Health Care for Widows",
+"Mental-health services should be integrated into widow support.",
+"A widow may need grief counseling, trauma therapy, treatment for depression or anxiety, family therapy, parenting support, or psychiatric care when clinically indicated.",
+"Mental-health assessment should be culturally sensitive. Clinicians should understand that grief can be shaped by family expectations, religious beliefs, community practices, gender roles, financial hardship, and stigma.",
+"The first question should not be, “What is wrong with you?” It should be, “What have you been carrying?”");
+
+ch(37,"Grief Counseling and Support Groups",
+"A safe widow support group can reduce isolation.",
+"Women can share experiences, learn coping skills, identify practical resources, and discover that their reactions are not unique.",
+"Support groups should be facilitated carefully. Confidentiality, respectful listening, boundaries, and referral pathways are essential.",
+"Group support does not replace individual therapy when someone has severe depression, trauma symptoms, suicidal thoughts, or other conditions requiring professional treatment.");
+
+ch(38,"The Role of Community Health Workers",
+"Community health workers can become a bridge between vulnerable families and formal services.",
+"They can identify women who are isolated, connect families to healthcare, notice signs of severe distress, provide psychoeducation, support referrals, and help families navigate available programs.",
+"Training should include grief, trauma, suicide-risk recognition, domestic and sexual violence, confidentiality, child protection, and referral systems.",
+"A widow should not have to know the healthcare system perfectly before receiving help.");
+
+ch(39,"Protecting Widows From Sexual Exploitation",
+"Protection begins by recognizing the power imbalance.",
+"A woman who needs food, housing, employment, or school fees is vulnerable to anyone who controls access to those resources. That vulnerability can be exploited by employers, religious leaders, community leaders, relatives, or acquaintances.",
+"Programs serving widows should have clear rules against sexual exploitation, confidential complaints, independent oversight, and consequences for abuse.",
+"No assistance should be conditional on sexual access.");
+
+ch(40,"Safe Help: How to Recognize Manipulation",
+"Manipulation may sound like help.",
+"“Come to my house if you want the money.”",
+"“Sleep with me and I will give you the job.”",
+"“I can help you, but you must prove that you love me.”",
+"“Do what I say and I will take care of your children.”",
+"These are not healthy support arrangements.",
+"Safe help respects consent, boundaries, privacy, and dignity. A trustworthy person does not make assistance dependent on sexual activity or obedience that violates a woman's values.");
+
+ch(41,"Boundaries Are Not Disrespect",
+"Many women are taught to be respectful, accommodating, and peaceful. These are valuable qualities, but they should not be confused with unlimited access.",
+"A widow can be respectful and still say no.",
+"She can forgive and still distance herself.",
+"She can be kind and still protect her children.",
+"She can honor elders and still refuse abuse.",
+"Boundaries are not disrespect. They are a way of defining what treatment is acceptable.");
+
+ch(42,"When You Feel Lonely",
+"Loneliness after the death of a spouse is deeply human.",
+"There may be a longing for conversation, companionship, shared decisions, affection, or simply the warmth of having another adult in the home.",
+"Do not shame yourself for missing those things.",
+"But do not allow loneliness to force you into unsafe relationships. Build community slowly. Reconnect with safe friends. Join healthy groups. Consider counseling.",
+"You are allowed to desire companionship without sacrificing safety.");
+
+ch(43,"When You Feel Rejected",
+"Rejection can become a second wound after bereavement.",
+"If friends disappear, relatives withdraw, or people treat you differently, you may begin asking whether something is wrong with you.",
+"There is nothing inherently wrong with you because someone else chose distance.",
+"Seek people who value you for who you are, not for what they can obtain from you.");
+
+ch(44,"When You Are Financially Struggling",
+"Financial hardship is not a moral failure.",
+"Make a realistic plan. Separate urgent needs from important but nonurgent needs. Seek legitimate work. Explore training and community resources. Ask for assistance without surrendering your boundaries.",
+"Do not let shame prevent you from seeking help.",
+"And do not let desperation convince you that exploitation is your only option.");
+
+ch(45,"You Are Allowed to Start Again",
+"Starting again does not betray the person you lost.",
+"You can laugh again without loving your husband less.",
+"You can build a career.",
+"You can make friends.",
+"You can travel.",
+"You can dream.",
+"You can eventually choose companionship if you desire it.",
+"There is no universal timetable for rebuilding a life. Give yourself permission to heal at your own pace.");
+
+ch(46,"A Message to the Woman Who Is Tired",
+"If you are exhausted, you do not have to be strong every minute.",
+"Rest.",
+"Cry.",
+"Pray.",
+"Talk to someone.",
+"Seek professional help.",
+"Take care of your body.",
+"Eat when you can. Sleep when you can. Accept safe assistance.",
+"Then take the next step.",
+"You do not have to solve your entire future today.");
+
+ch(47,"A Message to the Woman Who Has Been Called Names",
+"You are not a witch because someone accused you.",
+"You are not worthless because someone rejected you.",
+"You are not immoral because someone tried to exploit you.",
+"You are not a bad mother because you struggled financially.",
+"You are not weak because you cried.",
+"You are not broken because you need help.",
+"You are a human being who has experienced loss and hardship, and you deserve compassion, dignity, safety, and support.");
+
+ch(48,"To the Children of Widows",
+"If your mother struggled after your father died, her struggle was not your fault.",
+"If there was no money, it was not your fault.",
+"If you had to move, change schools, or live with relatives, it was not your fault.",
+"Your mother may have cried because she loved you and was carrying more than one person should have to carry.",
+"You deserve safety, education, love, and the freedom to grieve.");
+
+ch(49,"To the Men Who Can Make a Difference",
+"Men can become protectors of dignity rather than exploiters of vulnerability.",
+"If you know a widow who needs help, help without demanding her body in return.",
+"If you employ her, judge her by her work.",
+"If she comes to your church, treat her with dignity.",
+"If you are a relative, protect the children.",
+"If you are a community leader, speak against harmful accusations and exploitation.",
+"A man's strength is not demonstrated by how much power he can exercise over a vulnerable woman. It is demonstrated by how safely he uses power.");
+
+ch(50,"To Families Who Have Lost Their Way",
+"When a brother, son, or husband dies, grief can expose unresolved family tensions. Property, tradition, and old disagreements may surface.",
+"Stop and remember the children.",
+"Remember the widow is grieving.",
+"Remember that cruelty does not honor the person who died.",
+"Before asking what belongs to whom, ask what the family needs to survive.",
+"Let the memory of the deceased inspire protection rather than exploitation.");
+
+ch(51,"A New Model of Support for African Widows",
+"A stronger model should have five parts: emotional support, mental-health care, economic empowerment, legal protection, and child/family support.",
+"Support should be continuous rather than limited to the funeral period.",
+"A community can create a widow registry only with privacy and consent, a resource directory, rotating support volunteers, school-support partnerships, legal referrals, employment connections, and mental-health screening/referral pathways.",
+"The goal is not to make widows permanent recipients of charity. The goal is to help women move from crisis to stability and from stability to restoration.");
+
+ch(52,"From Survival to Restoration",
+"Survival asks, “How do I get through today?”",
+"Restoration eventually asks, “What kind of life can I build?”",
+"The real-life widow whose story informs this book raised her children, worked, adapted, forgave, maintained boundaries, and continued moving.",
+"Her story does not erase the pain. It demonstrates that pain and resilience can coexist.",
+"A woman can carry scars and still smile.",
+"She can remember the past and still build the future.",
+"Restoration is not pretending the loss never happened. It is learning that life can still contain purpose after loss.");
+
+ch(53,"You Are Still Here",
+"Look at you.",
+"After the tears.",
+"After the rejection.",
+"After the financial struggles.",
+"After the loneliness.",
+"After the accusations.",
+"After the nights when you wondered how you would survive—",
+"you are still here.",
+"Maybe you are not where you thought you would be. Maybe your story took a direction you never expected.",
+"But you are here.",
+"There is still purpose. There is still hope. There can still be joy. There can still be meaningful work. There can still be healthy relationships. There can still be healing.",
+"Your story is not over.",
+"You are more than a widow.",
+"You are a woman with a life that continues.",
+"And this may be the beginning of your new chapter.");
+
+/* ---- build the block stream ---- */
+const BLOCKS = [];
+function esc(s){ return s; }
+function pushChapter(c){
+  const orn = '<div class="ch-orn">'+LOTUS(16)+'</div>';
+  BLOCKS.push({type:'chapter', ch:c.n, html:'<div class="ch">'+orn+'<div class="ch-n">Chapter '+c.n+'</div><h2 class="ch-t">'+c.t+'</h2><div class="ch-rule"></div></div>'});
+  c.ps.forEach((p,i)=>{
+    const isVerse = c.ps.length>4 && p.length<70 && !/[.]$/.test(p)===false && p.split(' ').length<12 && c.n>=40;
+    if(i===0) BLOCKS.push({type:'p', ch:c.n, html:'<p class="lead">'+p+'</p>'});
+    else BLOCKS.push({type:'p', ch:c.n, html:'<p>'+p+'</p>'});
+  });
+}
+function LOTUS(sz){ return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#c9a24b" stroke-width="2.2" stroke-linecap="round"><path d="M24 40c-9 0-15-6-15-6s6-4 15-4 15 4 15 4-6 6-15 6Z"/><path d="M24 40V22"/><path d="M24 24c-4-4-4-12 0-18 4 6 4 14 0 18Z" fill="rgba(201,162,75,.2)"/><path d="M24 26c-6-1-11-7-12-14 7 1 12 6 12 14Z" fill="rgba(201,162,75,.12)"/><path d="M24 26c6-1 11-7 12-14-7 1-12 6-12 14Z" fill="rgba(201,162,75,.12)"/></g></svg>'; }
+
+/* Front matter */
+function section(title){ BLOCKS.push({type:'section', ch:0, html:'<div class="ch"><div class="ch-orn">'+LOTUS(16)+'</div><h2 class="sec-t">'+title+'</h2><div class="ch-rule"></div></div>'}); }
+function para(t,lead){ BLOCKS.push({type:'p', ch:BLOCKS._ch||0, html:'<p'+(lead?' class="lead"':'')+'>'+t+'</p>'}); }
+function verse(t){ BLOCKS.push({type:'p', ch:BLOCKS._ch||0, html:'<p class="verse">'+t+'</p>'}); }
+function quote(t){ BLOCKS.push({type:'p', ch:BLOCKS._ch||0, html:'<blockquote>'+t+'</blockquote>'}); }
+function li(n,t){ BLOCKS.push({type:'p', ch:BLOCKS._ch||0, html:'<p class="li"><b>'+n+'</b><span>'+t+'</span></p>'}); }
+function sub(t){ BLOCKS.push({type:'p', ch:BLOCKS._ch||0, html:'<h3 class="sub">'+t+'</h3>'}); }
+
+// Title page
+section("Mental Health Associated with Widowhood");
+para("<em>The Hidden Pain, Cruelty, Resilience, and Hope of Widows in Africa</em>");
+verse("Chigozie Fran Achubie, PMHNP, Registered Nurse, Midwife &amp; IT Professional");
+verse("Passionate About Positively Transforming Lives");
+verse("Co-Author: Mrs. Oge Onochie");
+
+// Dedication
+section("Dedication");
+para("This book is dedicated to every widow who has cried in silence, every mother who has wondered where the next meal or school fee would come from, every woman who has been judged instead of helped, and every child who has had to grow up carrying a loss that was never their fault.",true);
+para("It is dedicated to women who have been called names, accused of causing their husbands' deaths, denied their rights, exploited because they were vulnerable, or treated as though widowhood had erased their dignity.");
+para("It is also dedicated to the widows who kept going.");
+para("To the woman who sold food, farmed, traded, worked, borrowed, prayed, cried, and got up again: this book sees you.");
+para("And to the families, churches, professionals, communities, and governments that choose compassion over cruelty, may your work become part of the healing.");
+
+// Author's note
+section("Author's Note");
+para("This book combines lived experience, reflection, mental-health education, and practical recommendations concerning widowhood in Africa, with particular attention to Nigeria. The personal stories in the book are presented respectfully because real people lived these experiences.",true);
+para("Widowhood is not a single experience. African countries, communities, families, cultures, religions, and socioeconomic circumstances differ greatly. Not every widow experiences the abuses described in this book, and not every family or community treats widows cruelly. The purpose is not to condemn an entire culture. The purpose is to bring hidden suffering into the light and ask a necessary question: What happens to a woman after everyone goes home from the funeral?");
+para("The book also recognizes the many people who do help—relatives, friends, churches, neighbors, health professionals, employers, and community members. The goal is to encourage support that is safe, respectful, sustainable, and long-term.");
+para("The mental-health material is educational and should not be used as a substitute for individualized clinical assessment or emergency care.");
+
+// Chapters
+CH.forEach(c=>{ pushChapter(c); });
+
+// Back matter
+section("A Practical Support Checklist");
+para("When supporting a widow, ask:",true);
+li("1.","Is she and are her children physically safe?");
+li("2.","Does she have stable housing?");
+li("3.","Does she have food?");
+li("4.","Are the children attending school?");
+li("5.","Does she have access to healthcare?");
+li("6.","Is she experiencing severe depression, anxiety, trauma symptoms, or thoughts of self-harm?");
+li("7.","Does she have a trusted person to call?");
+li("8.","Does she need legal assistance regarding property or inheritance?");
+li("9.","Does she have a safe source of income?");
+li("10.","Has anyone attempted to exploit her sexually or financially?");
+li("11.","Does she have access to grief counseling or a support group?");
+li("12.","What practical help would make the next month safer and more stable?");
+para("Most importantly, ask her directly: “What do you need right now?”");
+sub("A Message to Helpers");
+para("Do not promise what you cannot sustain.");
+para("It may be better to say, “I can help with school fees this month,” than to promise four years of support and disappear.");
+para("Consistency is more valuable than dramatic gestures.");
+para("Call after the funeral. Check again after three months. Remember the anniversary. Ask about the children. Help her identify opportunities. Respect her privacy. Never make assistance conditional on sex, romantic attention, obedience, or access to her body.");
+para("Support should restore dignity, not create another form of control.");
+sub("Mental-Health Warning Signs That Deserve Professional Attention");
+para("Professional assessment is especially important when a widow or child has persistent hopelessness, severe withdrawal, inability to perform normal responsibilities, significant sleep disturbance, panic symptoms, intrusive traumatic memories, escalating substance use, self-harm, suicidal thoughts, psychotic symptoms, or behavior that places the person or others at risk.");
+para("Grief is not a competition. There is no prize for suffering silently.");
+para("Seeking professional help is an act of care.");
+
+section("Closing Reflection");
+quote("“God is our refuge and strength, a very present help in trouble.” — Psalm 46:1");
+para("May every widow who reads these pages remember that her identity is larger than her loss.",true);
+para("May families choose compassion over suspicion. May communities choose support over gossip. May churches choose protection over exploitation. May governments build systems that work. May professionals listen without judgment.");
+para("May children of widows grow up knowing that their father's death did not determine the value of their lives.");
+para("And may the woman who once wondered whether she could survive discover that she has not only survived—she can heal, rebuild, and flourish.");
+
+section("About the Authors");
+para("Chigozie Fran Achubie, PMHNP, Registered Nurse, Midwife &amp; IT Professional, is passionate about positively transforming lives. Her professional and personal interests include mental health, wellbeing, education, community support, and helping people make intentional decisions that improve their lives and relationships.",true);
+para("Mrs. Oge Onochie is the co-author of this work and contributes to the lived-experience perspective that grounds the book in the realities of widowhood, motherhood, resilience, and rebuilding.");
+para("Together, the authors hope this book will encourage conversation, reduce stigma, strengthen support systems, and remind widows that their lives still hold meaning, dignity, purpose, and hope.");
+
+section("Disclaimer");
+para("This book is intended for education, reflection, advocacy, and general mental-health awareness. It is not a substitute for medical, psychiatric, psychological, legal, or emergency advice. Mental-health diagnoses and treatments require individualized assessment by qualified professionals. Laws and social-support programs vary by location. Readers facing immediate danger, abuse, or thoughts of suicide or self-harm should seek urgent local professional or emergency assistance.",true);
+
+/* =========================================================================
+   READER ENGINE
+   ========================================================================= */
+const RD = (function(){
+  const $=id=>document.getElementById(id);
+  const book=$('book'), leafL=$('leafL'), leafR=$('leafR');
+  let pages=[];          // {html, first, ch}
+  let unlocked=false;
+  let view=0;            // current view index
+  let single=false;      // mobile single-page
+  let paywallView=-1;    // view index that shows paywall (locked)
+  let lockPage=Infinity; // first locked page index
+  let animating=false;
+
+  const COVER = `<div class="cover"><div class="frame"></div>
+    <div class="kicker">Healing Hearts Publishing</div>
+    <h1>Mental Health<br>Associated with<span class="em">Widowhood</span></h1>
+    <div class="sub">Understanding the Pain, Embracing Healing, Finding Hope</div>
+    <div class="tag">You are not alone.<br>Healing is possible. Hope is real.</div>
+    <div class="sp"></div>
+    <div class="lotus">${LOTUS(30)}</div>
+    <div class="auth">Chigozie Fran Achubie</div>
+    <div class="co">Co-Author · Mrs Oge Onochie</div>
+    <div class="pub">Restoring Hope · Rebuilding Lives</div>
+  </div>`;
+
+  function isSingle(){ return window.matchMedia('(max-width:760px)').matches; }
+
+  function layout(){
+    const stage=document.querySelector('.stage');
+    const availH=stage.clientHeight-12, availW=stage.clientWidth-24;
+    single=isSingle();
+    let pw,ph;
+    const ratio=1.42;
+    if(single){
+      pw=Math.min(availW, availH/ratio, 460);
+      ph=pw*ratio;
+      if(ph>availH){ ph=availH; pw=ph/ratio; }
+    }else{
+      let totalW=Math.min(availW, 1000);
+      pw=totalW/2; ph=pw*ratio;
+      if(ph>availH){ ph=availH; pw=ph/ratio; }
+    }
+    const pad=Math.max(16, pw*0.11);
+    const fs=Math.max(12.5, Math.min(17, pw*0.043));
+    document.documentElement.style.setProperty('--pw', pw+'px');
+    document.documentElement.style.setProperty('--ph', ph+'px');
+    document.documentElement.style.setProperty('--pad', pad+'px');
+    document.documentElement.style.setProperty('--fs', fs+'px');
+    return {pw,ph,pad,fs};
+  }
+
+  function contentHeight(){
+    // available flow height = page height - padding*2 - runhead(16) - pageno(18) - gaps
+    const ph=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ph'));
+    const pad=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pad'));
+    return ph - pad*2 - 16 - 18 - 6;
+  }
+
+  function paginate(){
+    const probe=$('probeFlow');
+    probe.style.width=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pw'))-parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pad'))*2)+'px';
+    const avail=contentHeight();
+    probe.innerHTML='';
+    pages=[];
+    let cur=[], curFirst=0, curCh=0, started=false;
+    function flush(){ if(cur.length){ pages.push({html:cur.join(''), first:curFirst, ch:curCh}); cur=[]; started=false; } }
+    for(let i=0;i<BLOCKS.length;i++){
+      const b=BLOCKS[i];
+      const forceNew=(b.type==='chapter'||b.type==='section');
+      if(forceNew && cur.length){ flush(); probe.innerHTML=''; }
+      probe.insertAdjacentHTML('beforeend', b.html);
+      if(probe.scrollHeight>avail && cur.length>0){
+        probe.removeChild(probe.lastChild);
+        flush(); probe.innerHTML='';
+        probe.insertAdjacentHTML('beforeend', b.html);
+      }
+      if(!started){ curFirst=i; curCh=b.ch; started=true; }
+      cur.push(b.html);
+    }
+    flush();
+    // page 0 = cover
+    pages.unshift({html:COVER, first:-1, ch:0, cover:true});
+    // find lock page: first page whose starting chapter > freeThroughChapter
+    lockPage=Infinity;
+    for(let p=0;p<pages.length;p++){
+      if(pages[p].ch>CFG.freeThroughChapter){ lockPage=p; break; }
+    }
+    if(unlocked) lockPage=Infinity;
+    buildViews();
+    buildTOC();
+  }
+
+  let views=[]; // each: {pages:[idx...], paywall:bool}
+  function buildViews(){
+    views=[];
+    const N=pages.length;
+    const limit = (lockPage===Infinity)? N : lockPage;
+    if(single){
+      for(let p=0;p<limit;p++) views.push({pages:[p]});
+      if(lockPage!==Infinity) views.push({paywall:true});
+    }else{
+      // cover alone
+      views.push({pages:[0]});
+      for(let p=1;p<limit;p+=2){
+        if(p+1<limit) views.push({pages:[p,p+1]});
+        else views.push({pages:[p]});
+      }
+      if(lockPage!==Infinity) views.push({paywall:true});
+    }
+    paywallView=(lockPage!==Infinity)? views.length-1 : -1;
+    if(view>=views.length) view=views.length-1;
+  }
+
+  function pageHTML(idx){
+    const p=pages[idx];
+    if(!p) return '<div class="content"></div>';
+    if(p.cover) return p.html;
+    const running = p.ch>0 ? 'Chapter '+p.ch : (p.first>=0 ? 'Mental Health &amp; Widowhood' : '');
+    return '<div class="content"><div class="runhead"><span>Mental Health &amp; Widowhood</span><span class="r">'+(p.ch>0?'Ch. '+p.ch:'')+'</span></div><div class="flow">'+p.html+'</div><div class="pageno">'+idx+'</div></div>';
+  }
+  function paywallHTML(){
+    return '<div class="paywall"><div class="lock">🔒</div><h2>Keep reading</h2>'+
+      '<p>You’ve reached the end of the free preview. Unlock the full book to continue through all 53 chapters.</p>'+
+      '<div class="price">'+CFG.priceHTML+'</div>'+
+      '<button class="btn" onclick="RD.askUnlock()">Unlock &amp; continue reading</button>'+
+      '<button class="code" onclick="RD.askUnlock()">I have an access code</button>'+
+      '<ul><li>All 53 chapters</li><li>Support checklist &amp; warning signs</li><li>Closing reflection &amp; author’s note</li></ul></div>';
+  }
+
+  function renderView(anim){
+    const v=views[view];
+    leafR.style.display = single? 'none':'block';
+    document.querySelector('.spine').style.display = single? 'none':'block';
+    if(v.paywall){
+      leafL.className='leaf '+(single?'single':'left');
+      leafL.innerHTML=paywallHTML()+'<div class="curl"></div>';
+      if(!single){ leafR.className='leaf right'; leafR.innerHTML='<div class="content"></div><div class="curl"></div>'; }
+    }else if(single){
+      leafL.className='leaf single'+(anim?(' anim-'+anim):'');
+      leafL.innerHTML=pageHTML(v.pages[0])+'<div class="curl"></div>';
+    }else if(v.pages.length===1){
+      // cover: center it
+      leafL.className='leaf single';
+      leafL.innerHTML=pageHTML(v.pages[0])+'<div class="curl"></div>';
+      leafR.style.display='none'; document.querySelector('.spine').style.display='none';
+    }else{
+      leafL.className='leaf left';
+      leafR.className='leaf right'+(anim==='n'?' anim':'');
+      leafL.innerHTML=pageHTML(v.pages[0])+'<div class="curl"></div>';
+      leafR.innerHTML=pageHTML(v.pages[1])+'<div class="curl"></div>';
+      if(anim==='p'){ leafL.className='leaf left anim'; }
+    }
+    updateProgress();
+  }
+
+  function updateProgress(){
+    $('prev').disabled = view<=0;
+    $('next').disabled = view>=views.length-1;
+    const pct=views.length>1? Math.round(view/(views.length-1)*100):0;
+    $('fill').style.width=pct+'%'; $('pct').textContent=pct+'%';
+    const v=views[view];
+    let loc='Cover';
+    if(v.paywall) loc='Preview ends here';
+    else if(v.pages){ const p=pages[v.pages[0]]; loc = p&&p.cover?'Cover':(p&&p.ch>0?'Chapter '+p.ch:'Front matter'); }
+    $('loc').textContent=loc;
+  }
+
+  function go(dir){
+    if(animating) return;
+    const nv=view+dir;
+    if(nv<0||nv>=views.length) return;
+    animating=true;
+    view=nv;
+    let anim = single? (dir>0?'n':'p') : (dir>0?'n':'p');
+    renderView(anim);
+    setTimeout(()=>{ animating=false; }, 380);
+  }
+  function next(){ go(1); }
+  function prev(){ go(-1); }
+
+  function goToPage(pageIdx){
+    // map a page index to a view index
+    for(let i=0;i<views.length;i++){
+      const v=views[i];
+      if(v.pages && v.pages.indexOf(pageIdx)>=0){ view=i; renderView(); toc(false); return true; }
+    }
+    // locked
+    if(lockPage!==Infinity && pageIdx>=lockPage){ askUnlock(); toc(false); return false; }
+    return false;
+  }
+
+  /* ---- TOC ---- */
+  function buildTOC(){
+    const list=$('tocList');
+    let html='<button class="toc-item" onclick="RD.goCover()"><span class="n">◆</span><span class="t">Cover</span></button>';
+    // chapters
+    const seen={};
+    let sectionAdded=false;
+    for(let p=0;p<pages.length;p++){
+      const pg=pages[p];
+      if(pg.ch>0 && !seen['c'+pg.ch]){
+        seen['c'+pg.ch]=true;
+        if(!sectionAdded){ html+='<div class="toc-sec">Chapters</div>'; sectionAdded=true; }
+        const locked = (lockPage!==Infinity && p>=lockPage);
+        html+='<button class="toc-item" onclick="RD.goToPage('+p+')"><span class="n">'+pg.ch+'</span><span class="t">'+chTitle(pg.ch)+'</span>'+(locked?'<span class="lk">🔒</span>':'')+'</button>';
+      }
+    }
+    $('tocList').innerHTML=html;
+  }
+  function chTitle(n){ const c=CH.find(x=>x.n===n); return c?c.t:''; }
+
+  function toc(show){
+    if(show===undefined) show=!$('drawer').classList.contains('show');
+    $('drawer').classList.toggle('show',show);
+    $('drawerBg').classList.toggle('show',show);
+  }
+  function goCover(){ view=0; renderView(); toc(false); }
+
+  /* ---- unlock ---- */
+  function askUnlock(){ $('modalBg').classList.add('show'); setTimeout(()=>{var c=$('codeInput'); if(c) c.focus();},80); }
+  function closeModal(){ $('modalBg').classList.remove('show'); }
+  function checkout(){
+    // INTEGRATION HOOK: replace with Paystack/Stripe. On success call RD.unlock().
+    if(window.parent!==window){ window.parent.postMessage({type:'hs-checkout-request', book:'widowhood'}, '*'); }
+    toast('Connecting to secure checkout…');
+    // demo fallback so the preview is testable:
+    setTimeout(()=>{ unlock(true); }, 900);
+  }
+  function redeem(){
+    const v=($('codeInput').value||'').trim().toUpperCase();
+    if(v===CFG.accessCode.toUpperCase()){ unlock(true); }
+    else toast('That code was not recognised.');
+  }
+  function unlock(persist){
+    unlocked=true; document.body.classList.add('unlocked');
+    if(persist){ try{ localStorage.setItem(CFG.storageKey,'1'); }catch(e){} }
+    $('unlockBtn').style.display='none';
+    closeModal();
+    const wasPaywall = views[view] && views[view].paywall;
+    paginate();
+    if(wasPaywall){ // continue from where preview ended
+      view=Math.min(views.length-1, Math.max(0, findFirstLockedView()));
+    }
+    renderView();
+    toast('✓ Full book unlocked — enjoy reading');
+  }
+  function findFirstLockedView(){
+    for(let i=0;i<views.length;i++){ const v=views[i]; if(v.pages && v.pages.some(p=>p>=CFG._oldLock)) return i; }
+    return view;
+  }
+
+  /* ---- input ---- */
+  function bindInput(){
+    document.addEventListener('keydown',e=>{
+      if($('modalBg').classList.contains('show')){ if(e.key==='Enter') redeem(); if(e.key==='Escape') closeModal(); return; }
+      if(e.key==='ArrowRight'||e.key===' ') { e.preventDefault(); next(); }
+      if(e.key==='ArrowLeft') prev();
+    });
+    // swipe + tap zones
+    let sx=0,sy=0,st=0;
+    book.addEventListener('touchstart',e=>{ sx=e.touches[0].clientX; sy=e.touches[0].clientY; st=Date.now(); },{passive:true});
+    book.addEventListener('touchend',e=>{
+      const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
+      if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy)){ dx<0?next():prev(); }
+    },{passive:true});
+    book.addEventListener('click',e=>{
+      const r=book.getBoundingClientRect(); const x=e.clientX-r.left;
+      if(x>r.width*0.62) next(); else if(x<r.width*0.38) prev();
+    });
+    // parent-site unlock after real payment
+    window.addEventListener('message',e=>{
+      const d=e.data||{};
+      if(d.type==='hs-unlock'){ unlock(true); }
+    });
+  }
+  function toast(m){ const t=$('toast'); t.textContent=m; t.classList.add('show'); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2600); }
+
+  function relayout(){
+    const before=views[view]; const anchorPage=(before&&before.pages)?before.pages[0]:0;
+    layout(); paginate();
+    // restore near same page
+    if(before&&before.paywall){ view=views.length-1; }
+    else{ goToPage(anchorPage) || (view=Math.min(view,views.length-1)); }
+    renderView();
+  }
+
+  function init(){
+    // pre-unlock states
+    if(/[?&]relock=1/.test(location.search)){ try{ localStorage.removeItem(CFG.storageKey); }catch(e){} }
+    try{ if(localStorage.getItem(CFG.storageKey)==='1') unlocked=true; }catch(e){}
+    if(/[?&]unlocked=1/.test(location.search)) unlocked=true;
+    if(unlocked){ document.body.classList.add('unlocked'); $('unlockBtn').style.display='none'; }
+    $('modalPrice').innerHTML=CFG.priceHTML;
+    CFG._oldLock=0;
+    layout();
+    // record lock before unlock for continue logic
+    (function(){ const u=unlocked; unlocked=false; paginate(); CFG._oldLock=lockPage; unlocked=u; })();
+    paginate();
+    var mv=/[?&]view=(\d+)/.exec(location.search); if(mv){ view=Math.min(views.length-1, parseInt(mv[1],10)); }
+    renderView();
+    bindInput();
+    let rt; window.addEventListener('resize',()=>{ clearTimeout(rt); rt=setTimeout(relayout,200); });
+  }
+
+  return { init, next, prev, toc, goToPage, goCover, askUnlock, closeModal, checkout, redeem, unlock };
+})();
+RD.init();
+</script>
+</body>
+</html>
