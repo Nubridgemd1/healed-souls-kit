@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>Healed Souls — Cancer & Mental Health Series Links</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page{size:Letter;margin:0}
+  :root{--teal:#14746f;--tealDeep:#0e5551;--gold:#c9922f;--goldSoft:#f3e6c8;--cream:#faf6ee;--ink:#17302d;--slate:#465c58;--line:#e7ded0}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:8.5in;min-height:11in;margin:0 auto;padding:0 0 0.5in;position:relative}
+  .top{background:linear-gradient(135deg,#1a857f,#0e5551);color:#fff;padding:30px 54px 26px;text-align:center}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:12px}
+  .mk{width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-size:19px}
+  .brand small{font-family:'Mulish';font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:800;display:block;margin-top:2px}
+  .hl{font-family:'Cormorant Garamond',serif;font-size:23px;margin-top:14px;color:#ffe6a8;font-weight:700}
+  .sub{font-size:12.5px;color:rgba(255,255,255,.9);margin-top:4px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.5}
+  .intro{padding:16px 54px 2px;color:var(--slate);font-size:12px;line-height:1.5}
+  .grid{padding:10px 48px 0;display:grid;grid-template-columns:1fr 1fr;gap:11px 14px}
+  .card{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:var(--cream);break-inside:avoid;text-decoration:none;color:inherit}
+  .card:hover{border-color:var(--gold)}
+  .qr{width:74px;height:74px;flex:none;border:1px solid var(--line);border-radius:8px;background:#fff;padding:3px}
+  .qr img{width:100%;height:100%;display:block}
+  .num{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:var(--gold);line-height:1}
+  .ct{font-family:'Cormorant Garamond',serif;font-size:15px;line-height:1.14;color:var(--tealDeep);font-weight:700;margin:2px 0 4px}
+  .lk{font-size:9px;color:var(--teal);word-break:break-all;font-weight:600;line-height:1.3}
+  .foot{margin-top:18px;padding:14px 54px 0;text-align:center;border-top:1px solid var(--line)}
+  .fc{font-size:13px;font-weight:800;color:var(--teal)}
+  .fb{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:15px;margin-top:4px}
+  .fx{font-size:10.5px;color:var(--slate);margin-top:6px}
+</style></head>
+<body>
+<div class="page">
+  <div class="top">
+    <div class="brand"><span class="mk">&#9829;</span><span>Healed Souls<small>Psychiatry &amp; Healthcare Services</small></span></div>
+    <div class="hl">Mental Health &amp; a Cancer Diagnosis &mdash; 10 Articles to Share</div>
+    <div class="sub">Compassionate, faith-centered reads for patients, caregivers, and families. Scan a code or tap a link to open, then share to WhatsApp, text, email, or social.</div>
+  </div>
+  <div class="intro">Each article is free to read and share, with a one-tap Share bar and reader comments. Post them on your website, send them to patients, or print this sheet for your office.</div>
+  <div class="grid" id="grid"></div>
+  <div class="foot">
+    <div class="fc">&#9742; 832-608-2212 &nbsp;&bull;&nbsp; &#9993; healingsoulhealthcare@gmail.com &nbsp;&bull;&nbsp; www.hsphcs.com</div>
+    <div class="fb">&ldquo;We care and love, God heals.&rdquo;</div>
+    <div class="fx">Houston, TX &amp; California &middot; Now accepting new patients &middot; All articles: nubridgemd1.github.io/healed-souls-kit/blog/</div>
+  </div>
+</div>
+<script>
+var BASE="https://nubridgemd1.github.io/healed-souls-kit/blog/";
+var POSTS=[
+ [13,"When the Diagnosis Lands: Caring for Your Mental Health After a Cancer Diagnosis","blog-13-mental-health-after-cancer-diagnosis.html"],
+ [14,"Scanxiety: Managing the Fear Between Cancer Scans and Appointments","blog-14-scanxiety-managing-fear-between-scans.html"],
+ [15,"Depression During Cancer Treatment: Why It Happens and How to Find Relief","blog-15-depression-during-cancer-treatment.html"],
+ [16,"Chemo Brain and Mood: The Emotional Side of Cancer Treatment","blog-16-chemo-brain-and-mood.html"],
+ [17,"For Caregivers: Protecting Your Mental Health While Caring for a Loved One","blog-17-caregiver-mental-health-cancer.html"],
+ [18,"Telling the Family: Talking to Children & Loved Ones About a Diagnosis","blog-18-talking-to-family-about-cancer.html"],
+ [19,"Finding Peace in Uncertainty: Faith, Hope & Strength Through Cancer","blog-19-faith-hope-emotional-strength-through-cancer.html"],
+ [20,"Life After Cancer: Mental Health & Finding Yourself in Survivorship","blog-20-life-after-cancer-survivorship-mental-health.html"],
+ [21,"Sleep, Fatigue, and the Mind: Coping with Exhaustion During Cancer Care","blog-21-sleep-fatigue-and-the-mind-cancer.html"],
+ [22,"Grief, Loss, and Advanced Cancer: Emotional Care for Patients & Families","blog-22-grief-loss-advanced-cancer-emotional-care.html"]
+];
+document.getElementById("grid").innerHTML=POSTS.map(function(p){
+  var url=BASE+p[2];
+  var qr="https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=0&data="+encodeURIComponent(url);
+  var shortlk="…/blog/"+p[2];
+  return '<a class="card" href="'+url+'" target="_blank" rel="noopener"><div class="qr"><img src="'+qr+'" alt="QR"></div>'+
+    '<div><div class="num">'+String(p[0]).padStart(2,"0")+'</div>'+
+    '<div class="ct">'+p[1]+'</div>'+
+    '<div class="lk">'+shortlk+'</div></div></a>';
+}).join("");
+</script>
+</body></html>
